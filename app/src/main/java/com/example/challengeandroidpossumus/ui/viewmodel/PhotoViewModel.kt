@@ -1,4 +1,4 @@
-package com.example.challengeandroidpossumus.viewmodel
+package com.example.challengeandroidpossumus.ui.viewmodel
 
 import androidx.lifecycle.ViewModel
 

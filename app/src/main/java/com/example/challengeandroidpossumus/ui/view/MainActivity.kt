@@ -1,4 +1,4 @@
-package com.example.challengeandroidpossumus.view
+package com.example.challengeandroidpossumus.ui.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

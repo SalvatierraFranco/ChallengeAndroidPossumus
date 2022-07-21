@@ -1,4 +1,4 @@
-package com.example.challengeandroidpossumus.model
+package com.example.challengeandroidpossumus.data.model
 
 //Se crea esta lista para almacenar cada objeto obtenido de la API
 class PhotoProvider {
