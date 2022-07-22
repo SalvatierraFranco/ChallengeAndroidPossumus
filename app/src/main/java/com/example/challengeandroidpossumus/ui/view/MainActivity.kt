@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
 
         layoutManager = LinearLayoutManager(this)
         binding.rvPhotos.layoutManager = layoutManager
-
+        
         photoViewModel.photoLiveData.observe(this, Observer { photosList ->
             photoAdapter.addPhoto(photosList)
         })
@@ -38,10 +38,13 @@ class MainActivity : AppCompatActivity() {
         initUi()
     }
 
+    //Se configura RecyclerView para que muestre los datos en 3 columnas
     private fun initUi() {
         GridLayoutManager(this, 3, RecyclerView.VERTICAL, false)
             .apply { binding.rvPhotos.layoutManager = this }
         photoAdapter = PhotoAdapter(Providers.photos)
+        //Adapter de recyclerView recibe una instancia de PhotoAdapter con
+        // los datos obtenidos de la API
         binding.rvPhotos.adapter = photoAdapter
     }
 }
