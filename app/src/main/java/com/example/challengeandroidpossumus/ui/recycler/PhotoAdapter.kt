@@ -1,18 +1,21 @@
 package com.example.challengeandroidpossumus.ui.recycler
 
+import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.challengeandroidpossumus.R
+import com.example.challengeandroidpossumus.data.model.Photo
 
-class PhotoAdapter(): RecyclerView.Adapter<PhotoViewHolder>() {
+class PhotoAdapter(private var listPhotos: List<Photo>): RecyclerView.Adapter<PhotoViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PhotoViewHolder {
-        TODO("Not yet implemented")
+        var layoutInflater = LayoutInflater.from(parent.context)
+        return PhotoViewHolder(layoutInflater.inflate(R.layout.item_photo, parent, false))
     }
 
     override fun onBindViewHolder(holder: PhotoViewHolder, position: Int) {
-        TODO("Not yet implemented")
+        var url = listPhotos[position].thumbnailUrl
+        holder.bind(url)
     }
 
-    override fun getItemCount(): Int {
-        TODO("Not yet implemented")
-    }
+    override fun getItemCount(): Int = listPhotos.size
 }
