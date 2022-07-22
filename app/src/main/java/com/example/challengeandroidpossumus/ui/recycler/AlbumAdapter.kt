@@ -15,8 +15,13 @@ class AlbumAdapter(private var listAlbumes: List<Album>): RecyclerView.Adapter<A
     override fun onBindViewHolder(holder: AlbumViewHolder, position: Int) {
         var title = listAlbumes[position].title
         var userId = listAlbumes[position].userId
-        //holder.bind(title, userId)
+        holder.bind(title, userId)
     }
 
     override fun getItemCount(): Int = listAlbumes.size
+
+    fun addAlbum(albumLista: List<Album>){
+        listAlbumes = albumLista
+        notifyDataSetChanged()
+    }
 }

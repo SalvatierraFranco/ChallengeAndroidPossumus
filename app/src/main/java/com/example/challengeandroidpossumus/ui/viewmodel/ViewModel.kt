@@ -12,7 +12,7 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class PhotoViewModel @Inject constructor(
+class ViewModel @Inject constructor(
     var getPhotosUseCase: GetPhotosUseCase,
     var getAlbumsUseCase: GetAlbumsUseCase
 ): ViewModel() {

@@ -10,13 +10,13 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.challengeandroidpossumus.data.model.Providers
 import com.example.challengeandroidpossumus.databinding.ActivityMainBinding
 import com.example.challengeandroidpossumus.ui.recycler.PhotoAdapter
-import com.example.challengeandroidpossumus.ui.viewmodel.PhotoViewModel
+import com.example.challengeandroidpossumus.ui.viewmodel.ViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
-    private val photoViewModel: PhotoViewModel by viewModels()
+    private val photoViewModel: ViewModel by viewModels()
     private lateinit var layoutManager: LinearLayoutManager
     private lateinit var photoAdapter: PhotoAdapter
 

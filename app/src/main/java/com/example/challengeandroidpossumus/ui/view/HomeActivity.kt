@@ -14,6 +14,14 @@ class HomeActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         setPhotosList()
+        setAlbumsList()
+    }
+
+    private fun setAlbumsList() {
+        binding.btnAlbums.setOnClickListener {
+            var intentAlbums = Intent(it.context, AlbumActivity::class.java)
+            startActivity(intentAlbums)
+        }
     }
 
     private fun setPhotosList() {
