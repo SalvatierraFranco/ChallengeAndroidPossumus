@@ -3,7 +3,7 @@ package com.example.challengeandroidpossumus.ui.view
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.challengeandroidpossumus.R
-import com.example.challengeandroidpossumus.data.model.PhotoProvider
+import com.example.challengeandroidpossumus.data.model.Providers
 import com.example.challengeandroidpossumus.databinding.ActivityPhotoDetailsBinding
 import com.squareup.picasso.Picasso
 import dagger.hilt.android.AndroidEntryPoint
@@ -31,8 +31,8 @@ class PhotoDetailsActivity : AppCompatActivity() {
     }
 
     private fun initUI(id: Int) {
-        binding.tvAlbumId.text = PhotoProvider.photos[id].albumId.toString()
-        binding.tvTitle.text = PhotoProvider.photos[id].title
-        Picasso.get().load(PhotoProvider.photos[id].url).into(binding.ivUrlPhoto)
+        binding.tvAlbumId.text = Providers.photos[id].albumId.toString()
+        binding.tvTitle.text = Providers.photos[id].title
+        Picasso.get().load(Providers.photos[id].url).into(binding.ivUrlPhoto)
     }
 }

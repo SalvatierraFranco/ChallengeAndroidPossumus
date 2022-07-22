@@ -1,6 +1,6 @@
 package com.example.challengeandroidpossumus.di
 
-import com.example.challengeandroidpossumus.data.network.PhotoApiClient
+import com.example.challengeandroidpossumus.data.network.ApiClient
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -23,7 +23,7 @@ object NetworkModule {
 
     @Provides
     @Singleton
-    fun provideApiClient(retrofit: Retrofit): PhotoApiClient{
-        return retrofit.create(PhotoApiClient::class.java)
+    fun provideApiClient(retrofit: Retrofit): ApiClient {
+        return retrofit.create(ApiClient::class.java)
     }
 }

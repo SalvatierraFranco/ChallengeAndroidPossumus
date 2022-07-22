@@ -7,8 +7,7 @@ import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.challengeandroidpossumus.R
-import com.example.challengeandroidpossumus.data.model.PhotoProvider
+import com.example.challengeandroidpossumus.data.model.Providers
 import com.example.challengeandroidpossumus.databinding.ActivityMainBinding
 import com.example.challengeandroidpossumus.ui.recycler.PhotoAdapter
 import com.example.challengeandroidpossumus.ui.viewmodel.PhotoViewModel
@@ -27,7 +26,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         //Se llama al método onCreate() para iniciar el consumo de la API
-        photoViewModel.onCreate()
+        photoViewModel.onCreatePhotos()
 
         layoutManager = LinearLayoutManager(this)
         binding.rvPhotos.layoutManager = layoutManager
@@ -42,7 +41,7 @@ class MainActivity : AppCompatActivity() {
     private fun initUi() {
         GridLayoutManager(this, 3, RecyclerView.VERTICAL, false)
             .apply { binding.rvPhotos.layoutManager = this }
-        photoAdapter = PhotoAdapter(PhotoProvider.photos)
+        photoAdapter = PhotoAdapter(Providers.photos)
         binding.rvPhotos.adapter = photoAdapter
     }
 }
