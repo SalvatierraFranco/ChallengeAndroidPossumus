@@ -6,7 +6,9 @@ import com.example.challengeandroidpossumus.R
 import com.example.challengeandroidpossumus.data.model.PhotoProvider
 import com.example.challengeandroidpossumus.databinding.ActivityPhotoDetailsBinding
 import com.squareup.picasso.Picasso
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class PhotoDetailsActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityPhotoDetailsBinding

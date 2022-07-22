@@ -12,7 +12,9 @@ import com.example.challengeandroidpossumus.data.model.PhotoProvider
 import com.example.challengeandroidpossumus.databinding.ActivityMainBinding
 import com.example.challengeandroidpossumus.ui.recycler.PhotoAdapter
 import com.example.challengeandroidpossumus.ui.viewmodel.PhotoViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private val photoViewModel: PhotoViewModel by viewModels()

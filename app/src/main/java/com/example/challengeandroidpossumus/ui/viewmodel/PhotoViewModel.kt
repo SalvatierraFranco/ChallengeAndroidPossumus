@@ -5,11 +5,15 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.challengeandroidpossumus.data.model.Photo
 import com.example.challengeandroidpossumus.domain.GetPhotosUseCase
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class PhotoViewModel(): ViewModel() {
+@HiltViewModel
+class PhotoViewModel @Inject constructor(
+    var getPhotosUseCase: GetPhotosUseCase
+): ViewModel() {
     var photoLiveData = MutableLiveData<List<Photo>>()
-    var getPhotosUseCase = GetPhotosUseCase()
 
     fun onCreate(){
         viewModelScope.launch {
