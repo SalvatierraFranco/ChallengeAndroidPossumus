@@ -15,6 +15,7 @@ class PhotoViewHolder(view: View): RecyclerView.ViewHolder(view) {
         Picasso.get().load(url).into(binding.ivPhoto)
     }
 
+    //Código para poder hacer click en un elemento del RecyclerView y poder acceder a los detalles
     init {
         view.setOnClickListener{
             var position = adapterPosition

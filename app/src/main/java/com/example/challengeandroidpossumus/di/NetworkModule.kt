@@ -9,11 +9,13 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Singleton
 
+
+//Creo este módulo para proveer retrofit y ApiClient
 @Module
-@InstallIn(SingletonComponent::class)
+@InstallIn(SingletonComponent::class) //Declaro alcance a nivel Aplicación
 object NetworkModule {
     @Provides
-    @Singleton
+    @Singleton //Declaro que solo se debe usar una instancia para ahorrar memoria
     fun provideRetrofit(): Retrofit {
         return Retrofit.Builder()
             .baseUrl("https://jsonplaceholder.typicode.com/")
