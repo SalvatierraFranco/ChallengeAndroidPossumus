@@ -18,4 +18,9 @@ class PhotoAdapter(private var listPhotos: List<Photo>): RecyclerView.Adapter<Ph
     }
 
     override fun getItemCount(): Int = listPhotos.size
+
+    fun addPhoto(photoList: List<Photo>){
+        listPhotos = photoList
+        notifyDataSetChanged()
+    }
 }
